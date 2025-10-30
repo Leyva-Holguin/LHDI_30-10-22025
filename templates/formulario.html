@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+<form method="post" id="registro" action="/calcular">
+  <div class="mb-3">
+    <label for="peso" class="form-label">Peso (kg)</label>
+    <input type="number" class="form-control" id="peso" name="peso" value="{{ request.form.get('peso', '')}}" required>
+  </div>
+  <div class="mb-3">
+    <label for="altura" class="form-label">Altura (cm)</label>
+    <input type="number" class="form-control" id="altura" name="altura" value="{{ request.form.get('altura', '')}}" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+{% endblock %}
